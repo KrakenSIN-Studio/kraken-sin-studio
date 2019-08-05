@@ -1,0 +1,25 @@
+{
+  "name": "kraken-sin-studio",
+  "version": "1.0.0",
+  "description": "kraken-sin-studio official website",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --port=4000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SufranjNaweed/kraken-sin-studio.git"
+  },
+  "keywords": [
+    "Kraken",
+    "SIN",
+    "Studio"
+  ],
+  "author": "Naweed SUFRANJ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SufranjNaweed/kraken-sin-studio/issues"
+  },
+  "homepage": "https://github.com/SufranjNaweed/kraken-sin-studio#readme"
+}
