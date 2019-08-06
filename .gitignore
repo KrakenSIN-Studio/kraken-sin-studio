@@ -59,3 +59,13 @@ typings/
 
 # next.js build output
 .next
+
+# useless css 
+/assets/scss/*.css.map
+/assets/scss/*/*.css
+/assets/scss/*/*.css.map
+
+# ide
+.DS_Store
+.DS_Store/
+.idea/
