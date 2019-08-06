@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin:  0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+section{
+    min-height: 100vh;
+    width: 100%;
+    background-color: $bgColor;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    min-height: 100vh;
+    .menu{
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin: auto;
+        svg{
+            cursor: pointer;
+        }
+    }
+    .social{
+        position: absolute;
+        bottom: 5%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        a{
+            display: block;
+            text-align: center;
+            width: fit-content;
+            margin: 10px auto;
+            fill: #fff;
+            transition: all 0.3s linear;
+            &.github{
+                &:hover{
+                    fill: $github;
+                }
+            }
+            &.twitter{
+                &:hover{
+                    fill: $twitter;
+                }
+            }
+            &.instagram{
+                &:hover{
+                    fill: $instagram;
+                }
+            }
+        }
+    }
+}
+
+.main-logo{
+    position: fixed;
+    width: max-content;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+    img{
+        width: 200px;
+    }
+}
+
+.container{
+    max-width: 1180px;
+    margin-right: auto;
+    margin-left: auto;
+    @media screen and (min-width: 1400px){
+        max-width: 1300px;
+    }
+}
+
+
+#hero{
+    background-image: url("../images/kraken-studio.jpg");
+    background-position: center;
+    background-size: cover;
+
+    .title{
+        position: absolute;
+        top: 35%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        h1{
+            text-align: center;
+            font-size: 42px;
+            font-weight: $fBold;
+            color: #fff;
+            line-height: 80px;
+        }
+    }
+
+    .scroll{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span{
+            display: block;
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 36px;
+            font-weight: $fthin;
+        }
+        .vert-line{
+            width: 3px;
+            height: 80px;
+            background-color: #fff;
+        }
+    }
+}

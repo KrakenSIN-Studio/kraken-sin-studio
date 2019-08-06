@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap&subset=latin-ext");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #010510; }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  min-height: 100vh; }
+  nav .menu {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto; }
+    nav .menu svg {
+      cursor: pointer; }
+  nav .social {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    nav .social a {
+      display: block;
+      text-align: center;
+      width: fit-content;
+      margin: 10px auto;
+      fill: #fff;
+      transition: all 0.3s linear; }
+      nav .social a.github:hover {
+        fill: #6cc644; }
+      nav .social a.twitter:hover {
+        fill: #38A1F3; }
+      nav .social a.instagram:hover {
+        fill: #833ab4; }
+
+.main-logo {
+  position: fixed;
+  width: max-content;
+  top: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto; }
+  .main-logo img {
+    width: 200px; }
+
+.container {
+  max-width: 1180px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media screen and (min-width: 1400px) {
+    .container {
+      max-width: 1300px; } }
+
+#hero {
+  background-image: url("../images/kraken-studio.jpg");
+  background-position: center;
+  background-size: cover; }
+  #hero .title {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+    text-align: center; }
+    #hero .title h1 {
+      text-align: center;
+      font-size: 42px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 80px; }
+  #hero .scroll {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #hero .scroll span {
+      display: block;
+      color: #fff;
+      margin-bottom: 10px;
+      font-size: 36px;
+      font-weight: 100; }
+    #hero .scroll .vert-line {
+      width: 3px;
+      height: 80px;
+      background-color: #fff; }
+
+/*# sourceMappingURL=init.css.map */
