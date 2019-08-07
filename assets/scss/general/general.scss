@@ -2,13 +2,21 @@
     padding: 0;
     margin:  0;
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 
 
 section{
     min-height: 100vh;
     width: 100%;
+    padding: 20px 10px;
     background-color: $bgColor;
+    color: #fff;
+    
+    h2{
+        text-align: center;
+        font-size: 42px;
+    }
 }
 
 nav{
@@ -43,14 +51,24 @@ nav{
             margin: 10px auto;
             fill: #fff;
             transition: all 0.3s linear;
-            &.github{
+            &.facebook{
                 &:hover{
-                    fill: $github;
+                    fill: $facebook;
+                }
+            }
+            &.youtube{
+                &:hover{
+                    fill: $youtube;
                 }
             }
             &.twitter{
                 &:hover{
                     fill: $twitter;
+                }
+            }
+            &.twitch{
+                &:hover{
+                    fill: $twitch;
                 }
             }
             &.instagram{
@@ -98,8 +116,8 @@ nav{
         text-align: center;
         h1{
             text-align: center;
-            font-size: 42px;
-            font-weight: $fBold;
+            font-size: 53px;
+            font-weight: $fbold;
             color: #fff;
             line-height: 80px;
         }
@@ -127,4 +145,142 @@ nav{
             background-color: #fff;
         }
     }
+}
+
+#about{
+    padding: 40px 20px;
+    color: #fff;
+    h2{
+        text-align: center;
+        font-size: 53px;
+    }
+    .about-part{
+        max-width: 800px;
+        margin: 100px auto 150px;
+        position: relative;
+        
+        //position general
+        &::before{
+            color: #fff;
+            font-weight: $fthin;
+            position: absolute;
+            font-size: 48px;
+        }
+
+        // case bloc left or right
+        &.part-left{
+            &::before{     
+                top: 50px;
+                left: -150px;
+                transform: rotate(270deg);
+            }
+        }
+        &.part-right{
+            text-align: right;
+            &::before{     
+                top: 50px;
+                right: -150px;
+                transform: rotate(90deg);
+            }
+        }
+
+        // TEXT on the side
+        &.p-one::before{
+            content: "01 - KS";
+        }
+        &.p-two::before{
+            content: "02 - KS";
+        }
+        &.p-three::before{
+            content: "03 - KS";
+        }
+
+        h3{
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p{
+            font-weight: $fregular;
+            font-size: 28px;
+            line-height: 60px;
+            span{
+                font-weight: $fbold;
+            }
+        }
+    }
+}
+
+#contact{
+    color: #fff;
+    min-height: 30vh;
+    h2{
+        text-align: center;
+        font-size: 48px;
+        margin-bottom: 100px;
+    }
+    .newsletter{
+        text-align: center;
+        p{
+            font-weight: $fbold;
+            font-size: 28px;
+            margin-bottom: 50px;
+        }
+    }
+    .social-container{
+        .social{
+            display: flex;
+            flex-wrap: wrap;
+            
+            a{
+                display: flex;
+                align-items: center;
+                text-decoration: unset;
+                text-align: center;
+                max-width: 200px;
+                margin: 10px auto;
+                color: #fff;
+                font-weight: $fbold;
+                fill: #fff;
+                transition: all 0.3s linear;
+                svg{
+                    margin-right: 10px;
+                }
+                &.facebook{
+                    &:hover{
+                        fill: $facebook;
+                    }
+                }
+                &.youtube{
+                    &:hover{
+                        fill: $youtube;
+                    }
+                }
+                &.twitter{
+                    &:hover{
+                        fill: $twitter;
+                    }
+                }
+                &.twitch{
+                    &:hover{
+                        fill: $twitch;
+                    }
+                }
+                &.instagram{
+                    &:hover{
+                        fill: $instagram;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+footer{
+    background-color: $bgColor;
+    color: #fff;
+    text-align: center;
+    font-size: 26px;
+    padding: 20px;
 }
