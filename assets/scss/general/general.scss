@@ -152,7 +152,6 @@ nav{
     }
 }
 
-
 #hero{
     background-image: url("../images/kraken-studio.jpg");
     background-position: center;
@@ -252,7 +251,6 @@ nav{
                 }  
             }
         }
-
         // TEXT on the side
         &.p-one::before{
             content: "01 - KS";
@@ -301,6 +299,7 @@ nav{
             img{
                 position: relative;
                 width: 100%;
+                max-height: 400px;
                 border-radius: 4px;
             }
             .overlay{
@@ -363,9 +362,10 @@ nav{
             }
         } 
     }
-    .more-game{
+    #btn-more-games{
         padding: 10px;
         text-align: center;
+        cursor: pointer;
         a{
             color: $cta;
             padding: 10px 15px;
