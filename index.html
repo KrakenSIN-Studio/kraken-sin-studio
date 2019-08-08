@@ -13,7 +13,7 @@
         <nav>
             <div id="side-social" class="social">
                 <a class="youtube" href="https://github.com/SufranjNaweed" target="_blank">
-                    <svg width="30px" aria-hidden="true" focusable="false" data-prefix="fab" role="img"viewBox="0 0 576 512"><path  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" class=""></path></svg>
+                    <svg width="30px" aria-hidden="true" focusable="false" data-prefix="fab" role="img" viewBox="0 0 576 512"><path  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" class=""></path></svg>
                 </a>
                 <a class="facebook" href="https://github.com/SufranjNaweed" target="_blank">
                     <svg width="20px" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" class=""></path></svg>
@@ -32,13 +32,13 @@
         <div class="main-logo">
             <img src="./assets/images/logo_transparent.png">
             <div class="progress-container">
-                <div class="progress-bar" id="progression-bar""></div>
+                <div class="progress-bar" id="progression-bar"></div>
               </div>
         </div> 
     </header>
     <section id="hero">
         <div class="title">
-            <h1>
+            <h1 class="wow fadeInUp">
                 KrakenSIN STUDIO <br>
                 GAME DEVELOPMENT STUDIO
             </h1>
@@ -51,7 +51,7 @@
     <section id="about">
         <div class="container">
             <h2>ABOUT US</h2>
-            <div class="about-part part-left p-one">
+            <div class="about-part part-left p-one wow fadeInLeft">
                 <h3>Who we are</h3>
                 <p>
                     KrakenSIN is an indie video game studio based in Paris, France.
@@ -66,7 +66,7 @@
                 </p>
             </div>
 
-            <div class="about-part part-right p-two">
+            <div class="about-part part-right p-two wow fadeInRight">
                 <h3>What we do</h3>
                 <p>
                     Well, don”t  except  us to make the next Metal Gear Solid or the  next  AAA game.
@@ -79,8 +79,7 @@
                 </p>
             </div>
 
-
-            <div class="about-part part-left p-three">
+            <div class="about-part part-left p-three wow fadeInLeft">
                 <h3>Who we are</h3>
                 <p>
                     GameMakerStudio 2  to make 2D Game
@@ -100,64 +99,36 @@
         <div class="container">
             <h2>Our GAMES</h2>
             <div id="games">
-                <div class="game-container">
-                    <div class="game-card">
-                        <img src="./assets/images/c&m.jpg">
+                <div id="main-games" class="game-container wow fadeInRight">
+                    <div v-for="game in games" class="game-card">
+                        <img :src="game.imageUrl">
                         <div class="overlay">
-                            <h3>nom du jeu</h3>
-                            <p class="tech">GODOT Engine</p>
-                            <p class="">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente sed quaerat ut dignissimos sequi fuga, voluptas voluptatum, vel dolorem qui?
+                            <h3>{{ game.title }}</h3>
+                            <p class="tech">{{ game.tech }}</p>
+                            <p>
+                                {{ game.description }}
                             </p>
                             <div class="button-container">
-                                <a class="button-play" href="#">play the game</a>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="game-card">
-                        <img src="./assets/images/c&m.jpg">
-                        <div class="overlay">
-                            <h3>nom du jeu</h3>
-                            <p class="tech">GODOT Engine</p>
-                            <p class="">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente sed quaerat ut dignissimos sequi fuga, voluptas voluptatum, vel dolorem qui?
-                            </p>
-                            <div class="button-container">
-                                <a class="button-play" href="#">play the game</a>
+                                <a class="button-play" :href="game.url" target="_blank">play the game</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="more-game">
-                    <a href="#"> view more games </a>
+                <div id="btn-more-games">
+                    <a> view more games </a>
                 </div>
                 <!-- Old-Games -->
-                <div class="game-container">
-                    <div class="game-card">
-                        <img src="./assets/images/c&m.jpg">
+                <div id="more-games" class="game-container" style="display: none;">
+                    <div v-for="game in games" class="game-card">
+                        <img :src="game.imageUrl">
                         <div class="overlay">
-                            <h3>nom du jeu</h3>
-                            <p class="tech">GODOT Engine</p>
-                            <p class="">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente sed quaerat ut dignissimos sequi fuga, voluptas voluptatum, vel dolorem qui?
+                            <h3>{{ game.title }}</h3>
+                            <p class="tech">{{ game.tech }}</p>
+                            <p>
+                                {{ game.description }}
                             </p>
                             <div class="button-container">
-                                <a class="button-play" href="#">play the game</a>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="game-card">
-                        <img src="./assets/images/c&m.jpg">
-                        <div class="overlay">
-                            <h3>nom du jeu</h3>
-                            <p class="tech">GODOT Engine</p>
-                            <p class="">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente sed quaerat ut dignissimos sequi fuga, voluptas voluptatum, vel dolorem qui?
-                            </p>
-                            <div class="button-container">
-                                <a class="button-play" href="#">play the game</a>
+                                <a class="button-play" :href="game.url" target="_blank">play the game</a>
                             </div>
                         </div>
                     </div>
@@ -170,11 +141,10 @@
             <h2>Contact</h2>
             <div class="newsletter">
                 <p>Where to find us ?</p>
-
-                <div class="social-container">
+                <div class="social-container wow fadeInDown">
                     <div class="social">
                         <a class="youtube" href="https://github.com/SufranjNaweed" target="_blank">
-                            <svg width="30px" aria-hidden="true" focusable="false" data-prefix="fab" role="img"viewBox="0 0 576 512"><path  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" class=""></path></svg>
+                            <svg width="30px" aria-hidden="true" focusable="false" data-prefix="fab" role="img" viewBox="0 0 576 512"><path  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" class=""></path></svg>
                             Monsieur Kraken_SIN
                         </a>
 
@@ -208,6 +178,7 @@
             </p>
         </div>
     </footer>
+    <script type="text/javascript" src="assets/js/wow.js"></script>
     <script type="text/javascript" src="assets/js/vuejs-v2.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
