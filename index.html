@@ -11,10 +11,10 @@
 <body>
     <header>
         <nav>
-            <div class="menu">
+            <!-- <div class="menu">
                 <svg width="30px" aria-hidden="true" focusable="false" role="img" viewBox="0 0 512 512"><path fill="white" d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z" class=""></path></svg>
-            </div>
-            <div class="social">
+            </div> -->
+            <div id="side-social" class="social">
                 <a class="youtube" href="https://github.com/SufranjNaweed" target="_blank">
                     <svg width="30px" aria-hidden="true" focusable="false" data-prefix="fab" role="img"viewBox="0 0 576 512"><path  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" class=""></path></svg>
                 </a>
@@ -34,9 +34,11 @@
         </nav>
         <div class="main-logo">
             <img src="./assets/images/logo_transparent.png">
+            <div class="progress-container">
+                <div class="progress-bar" id="progression-bar""></div>
+              </div>
         </div> 
     </header>
-
     <section id="hero">
         <div class="title">
             <h1>
@@ -98,7 +100,73 @@
         </div>
     </section>
     <section id="games">
+        <div class="container">
             <h2>Our GAMES</h2>
+            <div id="games">
+                <div class="game-container">
+                    <div class="game-card">
+                        <img src="./assets/images/c&m.jpg">
+                        <div class="overlay">
+                            <h3>nom du jeu</h3>
+                            <p class="tech">GODOT Engine</p>
+                            <p class="">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente sed quaerat ut dignissimos sequi fuga, voluptas voluptatum, vel dolorem qui?
+                            </p>
+                            <div class="button-container">
+                                <a class="button-play" href="#">play the game</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="game-card">
+                        <img src="./assets/images/c&m.jpg">
+                        <div class="overlay">
+                            <h3>nom du jeu</h3>
+                            <p class="tech">GODOT Engine</p>
+                            <p class="">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente sed quaerat ut dignissimos sequi fuga, voluptas voluptatum, vel dolorem qui?
+                            </p>
+                            <div class="button-container">
+                                <a class="button-play" href="#">play the game</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="more-game">
+                    <a href="#"> view more games </a>
+                </div>
+                <!-- Old-Games -->
+                <div class="game-container">
+                    <div class="game-card">
+                        <img src="./assets/images/c&m.jpg">
+                        <div class="overlay">
+                            <h3>nom du jeu</h3>
+                            <p class="tech">GODOT Engine</p>
+                            <p class="">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente sed quaerat ut dignissimos sequi fuga, voluptas voluptatum, vel dolorem qui?
+                            </p>
+                            <div class="button-container">
+                                <a class="button-play" href="#">play the game</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="game-card">
+                        <img src="./assets/images/c&m.jpg">
+                        <div class="overlay">
+                            <h3>nom du jeu</h3>
+                            <p class="tech">GODOT Engine</p>
+                            <p class="">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente sed quaerat ut dignissimos sequi fuga, voluptas voluptatum, vel dolorem qui?
+                            </p>
+                            <div class="button-container">
+                                <a class="button-play" href="#">play the game</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="contact">
         <div class="container">
@@ -138,7 +206,7 @@
     </section>    
     <footer>
         <div class="container">
-            <p>Design & Developped by Naweed SUFRANJ, Paris 2019</p>
+            <p>Design & Developped by Naweed SUFRANJ, Paris 2019 🇫🇷</p>
         </div>
     </footer>
     <script type="text/javascript" src="assets/js/vuejs-v2.js"></script>

@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 
 section{
     min-height: 100vh;
@@ -26,6 +30,7 @@ nav{
     width: 100px;
     min-height: 100vh;
     .menu{
+        z-index: 10;
         position: absolute;
         top: 20px;
         left: 0;
@@ -36,11 +41,15 @@ nav{
             cursor: pointer;
         }
     }
+    
+    #side-social{
+        left: 10px;
+        transition: left 0.3s;
+    }
     .social{
         position: absolute;
-        bottom: 5%;
-        left: 0;
-        right: 0;
+        z-index: 10;
+        top: 30%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -50,7 +59,7 @@ nav{
             width: fit-content;
             margin: 10px auto;
             fill: #fff;
-            transition: all 0.3s linear;
+            transition: all 0.2s ease-in;
             &.facebook{
                 &:hover{
                     fill: $facebook;
@@ -82,14 +91,18 @@ nav{
 
 .main-logo{
     position: fixed;
-    width: max-content;
-    top: 20px;
+    width: 100%;
+    z-index: 20;
+    top: 0;
     left: 0;
     right: 0;
     text-align: center;
     margin: auto;
+    padding: 10px 0 0;
+    opacity: 0.8;
+    background-color: $bgColor;
     img{
-        width: 200px;
+        width: 150px;
     }
 }
 
@@ -210,13 +223,111 @@ nav{
     }
 }
 
+#games{
+    .game-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .game-card{
+            width: 40%;
+            margin: 100px auto; 
+            position: relative;
+            border-radius: 4px;
+            &:hover{
+                .overlay{
+                    display: flex;
+                }
+            }
+            img{
+                position: relative;
+                width: 100%;
+                border-radius: 4px;
+            }
+            .overlay{
+                display: none;
+    
+                transition: 0.6s all ease-in;
+    
+                position: absolute;
+                flex-direction: column;
+                justify-content: space-between;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                padding: 20px;
+                text-align: center;
+                background-color: black;
+                opacity: 0.8;
+    
+                border: 15px solid black;
+                border-radius: 4px;
+                box-shadow: inset 0px 0px 0px 5px $cta;
+    
+                h3{
+                    font-weight: $fbold;
+                    font-size: 28px;
+                }
+                .tech{
+                    font-size: 18;
+                    font-weight: $fthin;
+                }
+                p{
+                    font-size: 20px;
+                    font-weight: $fregular;
+                }
+                .button-container{
+                    .button-play{
+                        display: block;
+                        color: $primary;
+                        text-decoration: unset;
+                        text-transform: uppercase;
+                        font-weight: $fbold;
+                        font-size: 20px;
+                        padding: 10px 15px;
+                        background: transparent;
+                        border: solid 1px $primary;
+                        border-radius: 4px;
+                        transition: 0.3s linear all;
+                        &:hover{
+                            background-color: $primary;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    .more-game{
+        padding: 10px;
+        text-align: center;
+        a{
+            color: $cta;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 20px;
+            text-decoration: unset;
+            background-color: transparent;
+            border: 1px solid $cta;
+            &:hover{
+                color: #fff;
+                background-color: $cta;
+            }
+
+        }
+    }
+
+}
+
 #contact{
     color: #fff;
     min-height: 30vh;
+    padding: 50px 20px;
     h2{
         text-align: center;
         font-size: 48px;
-        margin-bottom: 100px;
+        margin-bottom: 60px;
     }
     .newsletter{
         text-align: center;
