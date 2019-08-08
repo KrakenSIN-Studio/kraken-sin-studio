@@ -62,7 +62,6 @@ typings/
 
 # useless css 
 /assets/scss/*.css.map
-/assets/scss/*/*.css
 /assets/scss/*/*.css.map
 
 # ide
