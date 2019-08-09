@@ -58,7 +58,7 @@
                     <br>
                     Web & Mobile developper Studiing
                     <br>
-                    <span>Why kraken ?</span>
+                    <span class="q-a">Why kraken ?</span>
                     <br>
                     Twenty Thousand Leagues Under the Sea by  <span>Jules Verne 🇫🇷</span>
                     <br>
@@ -73,7 +73,7 @@
                     <br>
                     If we can give you a smile or fill more self-confident by the end of the game, we will be entirely pleased
                     <br>
-                    <span>Why self-confident ?</span>
+                    <span class="q-a">Why self-confident ?</span>
                     <br>
                     Games like  Metal  Gear Solid & Monster Hunter made me grown a lot and got me out of my confort zone.
                 </p>
@@ -88,7 +88,7 @@
                     <br>
                     And we plan to move to Godot Engine for it 2D and 3D support.
                     <br>
-                    <span>Why Godot and not Unity or Unreal ?</span>
+                    <span class="q-a">Why Godot and not Unity or Unreal ?</span>
                     <br>
                     We are  web developpers therefore we work  with opensources’s techs and we would like to promote them by making games with as much  opensources software as <span>we can :) .</span>
                 </p>
@@ -108,7 +108,7 @@
                             <p>
                                 {{ game.description }}
                             </p>
-                            <div class="button-container">
+                            <div class="button-container" v-if="game.release">
                                 <a class="button-play" :href="game.url" target="_blank">play the game</a>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
                             <p>
                                 {{ game.description }}
                             </p>
-                            <div class="button-container">
+                            <div class="button-container" v-if="game.release">
                                 <a class="button-play" :href="game.url" target="_blank">play the game</a>
                             </div>
                         </div>

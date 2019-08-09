@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var buttonMoreGames = document.querySelector("#btn-more-games");
   buttonMoreGames.addEventListener("click", function(){
     document.querySelector('#more-games').style.display = "flex";
+    buttonMoreGames.style.display = "none";
   });
 
     /////////////////////////////////////////////
@@ -45,13 +46,15 @@ document.addEventListener("DOMContentLoaded", function() {
                   description : 'Project made with GameMakerStudio 2. Run and Gun type game .It\'s a Web Game, Mouse & keyboard is needed to play.',
                   url : 'https://monsieurkraken.itch.io/eyes-shooter',
                   imageUrl : "./assets/images/coming-soon.jpg",
-                  tech : "GameMaker Studio 2"
+                  tech : "GameMaker Studio 2",
+                  release : false
               },
               {   title : 'Super Cactus & Mammuth',
                   description : 'Project made with GODOT ENGINE. Platformer type game. It\'s a Web Game, Mouse & keyboard is needed to play.',
                   url : 'https://monsieurkraken.itch.io/prototype-globalgamejam2018',
                   imageUrl : "./assets/images/c&m.jpg",
-                  tech : "GODOT ENGINE"
+                  tech : "GODOT ENGINE",
+                  release : false
               }
           ]
       },
@@ -65,13 +68,16 @@ document.addEventListener("DOMContentLoaded", function() {
                   description : 'Project made with GameMakerStudio 1.4 in 3 Days. It\'s a Windows Game. Mouse is needed to play.',
                   url : 'https://monsieurkraken.itch.io/eyes-shooter',
                   imageUrl : "./assets/images/eyes_shooter.gif",
-                  tech : "GameMaker Studio 1.4"
+                  tech : "GameMaker Studio 1.4",
+                  release :  true,
+
               },
               {   title : 'Transmission - GameJam',
                   description : 'GlobalGameJam 2018\'s prototype made with GameMakerStudio 2 in 48h.  It\'s a Windows Game. Mouse is needed to play.',
                   url : 'https://monsieurkraken.itch.io/prototype-globalgamejam2018',
                   imageUrl : "./assets/images/transmission.gif",
-                  tech : "GameMaker Studio 2"
+                  tech : "GameMaker Studio 2",
+                  release : true
               }
           ]
       },
