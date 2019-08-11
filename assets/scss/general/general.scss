@@ -144,6 +144,36 @@ nav{
     }
 }
 
+
+#scroll-up{
+    position: fixed;
+    margin-bottom: 30px;
+    bottom: 0;
+    right: 30px;
+    z-index: 20;
+    transition: right 0.5s;
+    @media screen and (min-width: $mdScreen){ 
+        bottom: 5%;
+    }
+    a{
+        display: block;
+        border: solid 1px $cta;
+        border-radius: 4px;
+        padding: 10px 10px;
+        background-color: $cta;
+        transition: 0.3s linear all;
+        @media screen and (min-width: $mdScreen){
+            background-color: transparent;
+            &:hover{
+                background-color: $cta;
+                svg{
+                    fill: $cta;
+                }
+            }
+        }
+    }
+}
+
 .main-logo{
     position: fixed;
     width: 100%;
