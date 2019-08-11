@@ -16,8 +16,10 @@ document.addEventListener("DOMContentLoaded", function() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
       document.getElementById("side-social").style.left = "30px";
+      document.getElementById("scroll-up").style.right = "30px";
     } else {
       document.getElementById("side-social").style.left = "-50px";
+      document.getElementById("scroll-up").style.right = "-50px";
     }
     prevScrollpos = currentScrollPos;
   }
