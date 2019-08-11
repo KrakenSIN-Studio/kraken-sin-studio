@@ -454,7 +454,10 @@ nav{
         .social{
             display: flex;
             flex-wrap: wrap;
-            
+            flex-direction: column;
+            @media screen and (min-width: $mdScreen){
+                flex-direction: row;
+            }
             a{
                 display: flex;
                 align-items: center;
