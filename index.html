@@ -121,25 +121,6 @@
                         </div>
                     </div>
                 </div>
-                <div id="btn-more-games">
-                    <a> view more games </a>
-                </div>
-                <!-- Old-Games -->
-                <div id="more-games" class="game-container" style="display: none;">
-                    <div v-for="game in games" class="game-card">
-                        <img :src="game.imageUrl">
-                        <div class="overlay">
-                            <h3>{{ game.title }}</h3>
-                            <p class="tech">{{ game.tech }}</p>
-                            <p>
-                                {{ game.description }}
-                            </p>
-                            <div class="button-container" v-if="game.release">
-                                <a class="button-play" :href="game.url" target="_blank">play the game</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -180,6 +161,6 @@
     </footer>
     <script type="text/javascript" src="assets/js/wow.js"></script>
     <script type="text/javascript" src="assets/js/vuejs-v2.js"></script>
-    <script type="text/javascript" src="assets/js/main.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>

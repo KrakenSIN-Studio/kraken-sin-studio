@@ -29,42 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
     hideSocialMedia()
   }
   
-  /// show more games
-  var buttonMoreGames = document.querySelector("#btn-more-games");
-  buttonMoreGames.addEventListener("click", function(){
-    document.querySelector('#more-games').style.display = "flex";
-    buttonMoreGames.style.display = "none";
-  });
-
   /////////////////////////////////////////////
   ///            VUE JS
   //////////////////////////////////////////////
   var games = new Vue({
       el : '#main-games' ,
-      data : {
-        games : [
-          {   
-            title : 'One Room Game',
-            description : 'Project made with GameMakerStudio 2. Run and Gun type game .It\'s a Web Game, Mouse & keyboard is needed to play.',
-            url : 'https://monsieurkraken.itch.io/eyes-shooter',
-            imageUrl : "./assets/images/coming-soon.jpg",
-            tech : "GameMaker Studio 2",
-            release : false
-          },
-          {   
-            title : 'Super Cactus & Mammuth',
-            description : 'Project made with GODOT ENGINE. Platformer type game. It\'s a Web Game, Mouse & keyboard is needed to play.',
-            url : 'https://monsieurkraken.itch.io/prototype-globalgamejam2018',
-            imageUrl : "./assets/images/c&m.jpg",
-            tech : "GODOT ENGINE",
-            release : false
-          }
-        ]
-      },
-  });
-
-  var moreGames = new Vue({
-      el : '#more-games' ,
       data : {
         games : [
           {   
@@ -86,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
         ]
       },
   });
-
 
   /////////////////////////////
   /// SCROLL TO JS NATIF
